@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_BASE || (import.meta.env.DEV ? '' : 'https://blog-backend-8efx.onrender.com');
+const API_BASE = import.meta.env.VITE_API_BASE || 'https://blog-backend-8efx.onrender.com';
 
 // Helper to get auth header
 function getAuthHeader() {
