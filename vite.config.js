@@ -7,15 +7,15 @@ export default defineConfig({
   server: {
     proxy: {
       '/users': {
-        target: 'http://localhost:3000',
+        target: 'https://blog-backend-8efx.onrender.com',
         changeOrigin: true,
       },
       '/debates': {
-        target: 'http://localhost:3000',
+        target: 'https://blog-backend-8efx.onrender.com',
         changeOrigin: true,
       },
       '/arguments': {
-        target: 'http://localhost:3000',
+        target: 'https://blog-backend-8efx.onrender.com',
         changeOrigin: true,
       }
     }

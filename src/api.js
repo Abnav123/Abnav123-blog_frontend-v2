@@ -1,4 +1,4 @@
-const API_BASE = ''; // Relies on Vite proxy to map to http://localhost:3000
+const API_BASE = import.meta.env.VITE_API_BASE || (import.meta.env.DEV ? '' : 'https://blog-backend-8efx.onrender.com');
 
 // Helper to get auth header
 function getAuthHeader() {
@@ -14,7 +14,7 @@ async function request(url, options = {}) {
     ...(options.headers || {}),
   };
 
-  const response = await fetch(url, { ...options, headers });
+  const response = await fetch(`${API_BASE}${url}`, { ...options, headers });
   
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({}));
